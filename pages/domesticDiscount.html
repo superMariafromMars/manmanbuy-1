@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>国内折扣商品页面</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" type="text/css" href="../lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="../less/domesticDiscount.less">
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="logo">
+            <a href="javascript:window.history.go(-1)" class="fa fa-chevron-left"></a>
+        </div>
+        <h1>国内折扣</h1>
+        <div class="appdown">
+            <a href="#">
+                <img src="../images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+
+    <!-- 主体区域 -->
+    <main id="main">
+        <!--下拉刷新容器-->
+        <!-- <div id="pullrefresh" class="mui-content mui-scroll-wrapper"> -->
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--数据列表-->
+                <ul class="mui-table-view mui-table-view-chevron product-content">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6">
+                            <div class="product">
+                                <div class="product-img">
+                                    <img src="../images/55d2cf3eNc2d117d0.jpg" alt="">
+                                </div>
+
+                                <p class="product-name">AKBAR 雅客巴精选锡兰红茶 40g 斯里兰卡进口 *8件</p>
+                                <div class="product-price"> 104.8元（合13.1元/件）</div>
+                                <div class="info">京东商城 | 2019/2/17 23:30</div>
+                            </div>
+                        </div>
+                        <div class="mui-col-xs-6">
+                            <div class="product">
+                                <div class="product-img">
+                                    <img src="../images/55d2cf3eNc2d117d0.jpg" alt="">
+                                </div>
+                                <p class="product-name">AKBAR 雅客巴精选锡兰红茶 40g 斯里兰卡进口 *8件</p>
+                                <div class="product-price"> 104.8元（合13.1元/件）</div>
+                                <div class="info">京东商城 | 2019/2/17 23:30</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </ul>
+
+            </div>
+    </main>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="foot_top">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="javascript:;" style="width: 40%; border: 0;" id="rtt">
+                <img src="../images/top.png">返回顶部
+            </a>
+        </div>
+        <div class="foot_bottom">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="index.htm">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script type='text/html' id='productListTpl'>
+        <div class="mui-row">
+            {{each result value index}}
+            <div class="mui-col-xs-6 product-list">
+                <div class="product " data-id="{{value. productId}}">
+                    <div class="product-img">
+                        {{@value.productImg}}
+                    </div>
+                    <p class="product-name">{{value.productName}}</p>
+                    <div class="product-price"> {{value.productPrice}}</div>
+                    <div class="info">{{value.productFrom}} | {{value.productTime}}</div>
+
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </script>
+
+    <script src='../lib/mui/js/mui.js'></script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../js/domesticDiscount.js"></script>
+</body>
+
+</html>

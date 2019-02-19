@@ -109,3 +109,48 @@ body {
 #footer .foot_bottom p a:last-child {
   color: #bebebe;
 }
+#header {
+  z-index: 999;
+}
+#main {
+  position: relative;
+  flex: 1;
+  padding-bottom: 1.18rem;
+  background-color: #fff;
+}
+#main .mui-scroll-wrapper {
+  bottom: 1.18rem;
+}
+#main .product-img img {
+  width: 1rem;
+}
+#main .product-name {
+  color: black;
+  white-space: normal;
+}
+#main .product-name .price {
+  color: red;
+}
+#main .mui-ellipsis {
+  padding-top: 20px;
+}
+.page-option {
+  padding: 0.1rem 0.3rem;
+  display: flex;
+  background: #fff;
+  margin: 0.1rem 0;
+}
+.page-option #selectAge {
+  flex: 1;
+  margin: 0 0.25rem;
+  border: 1px solid #cccccc !important;
+  height: 0.35rem;
+  line-height: 0.17rem;
+}
+.page-option a {
+  height: 0.35rem;
+  background: #d4d4d4;
+  flex: 1;
+  border-radius: 0.05rem;
+  box-shadow: 0rem 0rem 0.05rem #ccc;
+}

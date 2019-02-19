@@ -109,3 +109,94 @@ body {
 #footer .foot_bottom p a:last-child {
   color: #bebebe;
 }
+#header {
+  z-index: 999;
+}
+#header .logo a {
+  display: block;
+  width: .5rem;
+  height: .5rem;
+  text-align: center;
+  color: #fff;
+  line-height: .5rem;
+}
+#header h1 {
+  font-size: .2rem;
+  color: #fff;
+}
+#main {
+  position: relative;
+  flex: 1;
+  padding-bottom: 1.18rem;
+  background-color: #fff;
+}
+#main .mui-scroll-wrapper {
+  bottom: 1.18rem;
+}
+#main .productDetail {
+  padding: 0rem .2rem;
+}
+#main .productDetail .product .product-img {
+  padding: .2rem 0rem;
+}
+#main .productDetail .product .product-img img {
+  width: 100%;
+}
+#main .productDetail .product .title {
+  font-size: .16rem;
+  text-align: center;
+}
+#main .productDetail .product .info {
+  font-size: .14rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+#main .productDetail .product .shop {
+  display: flex;
+  justify-content: space-between;
+  line-height: .3rem;
+}
+#main .productDetail .product .shop .price {
+  color: orange;
+}
+#main .productDetail .product .shop .store {
+  color: #ccc;
+}
+#main .productDetail .product .btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem .3rem;
+}
+#main .productDetail .product .btn button {
+  width: 49%;
+}
+#main .productDetail .QR-code {
+  padding: .5rem 0rem;
+}
+#main .productDetail .QR-code img {
+  width: 100%;
+}
+#main .productDetail .comment .title {
+  font-size: .16rem;
+  line-height: .2rem;
+}
+#main .productDetail .comment .reply textarea {
+  height: .8rem;
+}
+#main .upTop {
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  z-index: 999;
+}
+#main .upTop a {
+  display: block;
+  color: #ccc;
+  font-size: .5rem;
+  transform: rotateZ(-45deg);
+}
+#footer {
+  z-index: 999;
+}
