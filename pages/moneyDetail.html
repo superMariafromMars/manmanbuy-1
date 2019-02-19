@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>省钱控详情页面</title>
+    <link rel="stylesheet" type="text/css" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" type="text/css" href="../lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="../less/moneyDetail.less">
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="logo">
+            <a href="index.html" title="慢慢买">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="title"></div>
+        <div class="appdown">
+            <a href="#">
+                <img src="../images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+
+
+
+    <!-- 主体区域 -->
+    <main id="main">
+
+        <div class="mui-scroll-wrapper">
+
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+               
+                <!-- 标题 -->
+                <h4 class="title">限地区 好价：耶米熊 沙琪玛黑糖味礼盒装 600g</h4>
+                <span class="price">4.95元（9.9元，买一送一）</span>
+                <div class="info">
+                    <span class="store">京东商城</span>
+                    <span class="time">10-25 10:34</span>
+                    <span class="tips">xiyuweifeng / 慢慢买</span>
+                </div>
+                <!-- 主要文字内容和图片 -->
+                <!-- 第一部分图片和文字 -->
+                <div class="particulars">
+                    <p class="left">耶米熊 沙琪玛黑糖味礼盒装 600g，精选优质小麦粉，传统工艺制作，香脆可口，当早餐或休闲零食都不错。</p>
+                    <p class="image">
+                        <img src="http://a.manmanbuy.com:8013/cuxiaoPic/201610/2016100010364371393.jpg" alt="">
+                    </p>
+                </div>
+                <!-- 第二部分文字 -->
+                <p class="activity">耶米熊 沙琪玛黑糖味礼盒装
+                    600g，精选优质小麦粉，传统工艺制作，香脆可口，当早餐或休闲零食都不错。京东移动端特价9.9元，还买一送一，折4.95元/件，礼盒装600g不到5元，好价可入啊。限地区有货。</p>
+                <!-- 第三部分图片 -->
+                <p class="sauce">
+                    <img src="http://a.manmanbuy.com:8013/cuxiaoPic/201610/2016100010364371393.jpg"
+                        alt="限地区 好价：耶米熊 沙琪玛黑糖味礼盒装 600g">
+                </p>
+                <!--前往购买  -->
+                <a href="javascript:void(0)" class="shopping">前往购买</a>
+
+                <section id="comment">
+                    <div class="cu-content-pl ui-border-t">
+                        <div class="title">发表评论</div>
+                        <div class="reply">
+                            <div class="form">
+                                <textarea name="ctl00$ContentBody$txt_nr" id="area"
+                                    rows="3"></textarea>
+                                <input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1"
+                                    class="tjdp" type="submit">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </section>
+
+        </div>
+        </div>
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="foot_top">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="javascript:;" style="width: 40%; border: 0;" id="rtt">
+                <img src="../images/top.png">返回顶部
+            </a>
+        </div>
+        <div class="foot_bottom">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="index.htm">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+<script id="moneyDetailTpl" type="text/html">
+    {{each  result value }}
+      <!-- 标题 -->
+      <h4 class="title">{{value.productName}}</h4>
+      <span class="price">{{value.productPinkage}}</span>
+      <div class="info">
+          <span class="store">{{value.productFrom}}</span>
+          <span class="time">{{value.productTime}}</span>
+          <span class="tips">{{value.productTips}}</span>
+      </div>
+      <!-- 主要文字内容和图片 -->
+      <!-- 第一部分图片和文字 -->
+      <div class="particulars">
+          <p class="left">{{value.productInfo}}</p>
+          <p class="image">
+              {{@value.productImgSm}}
+          </p>
+      </div>
+      <!-- 第二部分文字 -->
+      <p class="activity">{{value.productInfo2}}</p>
+      <!-- 第三部分图片 -->
+      <p class="sauce">
+         {{@value.productImg2}}"
+      </p>
+      <!--前往购买  -->
+      <a href="javascript:void(0)" class="shopping">前往购买</a>
+
+      <section id="comment">
+          {{@value.productComment}}
+     </section>
+    
+    {{/each}}
+</script>
+   
+    
+<script src="../lib/jquery/jquery-3.1.1.min.js"></script>
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/moneyDetail.js"></script>
+</body>
+
+</html>

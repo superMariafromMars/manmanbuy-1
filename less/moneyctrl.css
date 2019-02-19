@@ -1,0 +1,174 @@
+html {
+  /* 设置 根元素在 375屏幕下的时候 是100px   100px就是 26.66667vw */
+  font-size: 26.66667vw;
+}
+body {
+  font-size: .14rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: middle;
+  border: none;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+em,
+i {
+  font-style: normal;
+}
+input {
+  outline: none;
+  border: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+#header {
+  background-color: #ff4e49;
+  height: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 .1rem;
+}
+#header .logo a {
+  display: block;
+}
+#header .logo a img {
+  height: .25rem;
+}
+#header .appdown a {
+  display: block;
+}
+#header .appdown a img {
+  height: .34rem;
+}
+#footer {
+  background-color: #232a34;
+  height: 1.18rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+#footer .foot_top {
+  height: .34rem;
+  line-height: .34rem;
+  border-bottom: 1px solid #727272;
+  text-align: center;
+  display: flex;
+}
+#footer .foot_top a {
+  color: #fff;
+  font-size: .14rem;
+  width: 33.3%;
+}
+#footer .foot_top a:nth-child(n+1) {
+  border-right: 1px solid #727272;
+}
+#footer .foot_top a:last-child img {
+  width: .16rem;
+  margin-right: .05rem;
+}
+#footer .foot_bottom {
+  padding: .15rem 0;
+}
+#footer .foot_bottom p {
+  color: #666;
+  font-size: .12rem;
+}
+#footer .foot_bottom p a {
+  color: #ff4e49;
+}
+#footer .foot_bottom p a:last-child {
+  color: #bebebe;
+}
+#header {
+  z-index: 99;
+}
+#footer {
+  z-index: 99;
+}
+body {
+  overflow: hidden;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1.93rem;
+}
+#main .mui-scroll-wrapper {
+  height: 100%;
+}
+#main .mui-scroll-wrapper .mui-table-view:after {
+  left: .2rem;
+}
+#main .mui-scroll-wrapper .mui-media a {
+  display: flex;
+}
+#main .mui-scroll-wrapper .mui-media a img {
+  width: 1rem;
+  height: 1rem;
+  max-width: 1rem;
+  margin-right: .1rem;
+}
+#main .mui-scroll-wrapper .mui-media-body {
+  flex: 1;
+}
+#main .mui-scroll-wrapper .mui-media-body .product-name {
+  white-space: normal;
+  color: black;
+}
+#main .mui-scroll-wrapper .mui-media-body .product-name span {
+  color: red;
+}
+#main .mui-scroll-wrapper .mui-media-body .mui-ellipsis {
+  margin-top: .2rem;
+}
+#page {
+  position: absolute;
+  bottom: 1.18rem;
+  left: 0;
+  display: flex;
+  width: 100%;
+  padding: 0.2rem 0.3rem;
+  background-color: #fff;
+}
+#page a {
+  height: 0.35rem;
+  background: #d4d4d4;
+  flex: 1;
+  border-radius: 0.05rem;
+  box-shadow: 0rem 0rem 0.05rem #ccc;
+}
+#page #selectAge {
+  flex: 1;
+  margin-bottom: 0;
+  padding: 0;
+  border: 1px solid #cccccc !important;
+  margin: 0 0.3rem ;
+}

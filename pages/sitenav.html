@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商城导航页面</title>
+    <link rel="stylesheet" type="text/css" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" type="text/css" href="../lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="../less/sitenav.less">
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="logo">
+            <a href="index.html" title="慢慢买">
+                <i class="mui-icon mui-icon-back"> </i>
+            </a>
+        </div>
+        <div class="title">商城导航</div>
+        <div class="appdown">
+            <a href="#">
+                <img src="../images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+
+
+    <!-- 主体区域 -->
+    <nav id="nav">
+
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+               <div class="mui-row sitenavcontent">
+                   <!-- 第一个 -->
+                   <div class="mui-col-xs-3">
+                       <a href="http://union.click.jd.com/jdc?e=&amp;p=AiIBZRprFDJWWA1FBCVbV0IUEEULXg1cAAQJS14M…xkSUGZZHkcCaUJQWiUXVyUDIgRUHF8XCxUDVytrc38i&amp;t=W1dCFBBFC14NXAAECUteDA%3D%3D">
+                        
+                        <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+                        
+                           京东商城
+            
+                       </a>
+                   </div>
+
+                   <div class="mui-col-xs-3">
+                    <a href="http://union.click.jd.com/jdc?e=&amp;p=AiIBZRprFDJWWA1FBCVbV0IUEEULXg1cAAQJS14M…xkSUGZZHkcCaUJQWiUXVyUDIgRUHF8XCxUDVytrc38i&amp;t=W1dCFBBFC14NXAAECUteDA%3D%3D">
+                     
+                     <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+                     
+                        京东商城
+         
+                    </a>
+                   </div>
+                   <div class="mui-col-xs-3">
+                        <a href="http://union.click.jd.com/jdc?e=&amp;p=AiIBZRprFDJWWA1FBCVbV0IUEEULXg1cAAQJS14M…xkSUGZZHkcCaUJQWiUXVyUDIgRUHF8XCxUDVytrc38i&amp;t=W1dCFBBFC14NXAAECUteDA%3D%3D">
+                         
+                         <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+                         
+                            京东商城
+             
+                        </a>
+                       </div>
+                       <div class="mui-col-xs-3">
+                            <a href="http://union.click.jd.com/jdc?e=&amp;p=AiIBZRprFDJWWA1FBCVbV0IUEEULXg1cAAQJS14M…xkSUGZZHkcCaUJQWiUXVyUDIgRUHF8XCxUDVytrc38i&amp;t=W1dCFBBFC14NXAAECUteDA%3D%3D">
+                             
+                             <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+                             
+                                京东商城
+                 
+                            </a>
+                           </div>
+               </div>
+            </div>
+        </div>
+
+    </nav>
+    <!-- 底部上面的返回首页点击区 -->
+    <div class="footnav">
+            <span>
+                <a href="index.html">首页</a>
+                 <span href="">&gt; 商城导航</span>
+             </span>
+     </div>
+ 
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="foot_top">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <!-- 返回顶部 -->
+            <a href="javascript:;" style="width: 40%; border: 0;" id="rtt">
+                <img src="../images/top.png">返回顶部
+            </a>
+        </div>
+        <div class="foot_bottom">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="index.htm">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+<!-- 创建模板 -->
+  <script id="sitenavTpl" type="text/html">
+    {{each result value }}
+       <!-- 第一个 -->
+       <div class="mui-col-xs-3">
+        <a href="{{@value.navHref}}">
+         
+         <img src="{{@value.navImg}}" alt="">
+         
+           {{value.navTitle}}
+
+        </a>
+    </div>
+    {{/each}}
+  </script>
+    <script src="../lib/jquery/jquery-3.1.1.min.js"></script>
+    <script src="../lib/mui/js/mui.js"></script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/sitenav.js"></script>
+</body>
+
+</html>

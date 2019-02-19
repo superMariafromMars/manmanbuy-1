@@ -1,0 +1,68 @@
+@import "base.less";
+// 头部共有样式
+#header{
+    z-index: 99;
+    height: .44rem;
+    background-color: #ff841d;
+    .logo{
+        a{
+            i{
+               color: #fff;
+            }
+        }
+    }
+    .appdown a img {
+        height: .34rem;
+    }
+    .title{
+        color: #fff;
+        font-size: .2rem;
+    }
+}
+// 底部共有样式
+#footer{
+    z-index: 99;
+}
+//中间公共样式
+body{
+    overflow: hidden;
+    background-color: #fff;
+}
+
+// 导航栏
+#nav {
+    padding-top: 0 0.45rem 0.45rem 0;
+    width: 3.5rem;
+    margin: 0.05rem auto;
+    flex:1;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.48rem;
+    // 因为滚动条自带  position: absolute; 属性,所以如果不给nav 添加 相对定位,
+    //  那么他就参考父盒子定位,这样就把nav的内容遮盖部分
+    .mui-col-xs-3 {
+        /* background-color: #efeff4; */
+        background: #f4f4f4;
+        padding: 0.05rem;
+        height: 0.4rem;
+        width: auto;
+        line-height: 0.3rem;
+        border: 1px solid #bfbfbf;
+        display: inline-block;
+        margin: 0.05rem;
+        border-radius: 0.03rem;
+    }
+
+}
+.footnav{
+    position: absolute;
+    left: 0;
+    bottom:1.18rem;
+    width: 100%;
+    height: .3rem;
+    line-height: .3rem;
+    background-color: #ebebeb;
+    border-top: 0.01rem solid #ebebeb; 
+    border-bottom: 0.01rem solid #ccc;
+    padding-left: 0.08rem;
+}       

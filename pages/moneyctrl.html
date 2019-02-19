@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>省钱控页面</title>
+    <link rel="stylesheet" type="text/css" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" type="text/css" href="../lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="../less/moneyctrl.less">
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="logo">
+            <a href="index.html" title="慢慢买">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="title"></div>
+        <div class="appdown">
+            <a href="#">
+                <img src="../images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+
+
+    <!-- 主体区域 -->
+    <main id="main">
+
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                <ul class="mui-table-view moneyUl">
+                    <li class="mui-table-view-cell mui-media">
+                        <a href="javascript:;">
+                            <!--  class="mui-pull-left"控制图片在左边并且控制大小 -->
+                            <!-- <img class="mui-media-object mui-pull-left"  src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+                                              class="mui-media-body"   控制文字在右边  -->
+                            <div class="mui-media-body">
+                                <p class="product-name">移动端凑单品：海天 鲜味 生抽 1.28L<span>10.9元</span></p>
+                                <p class='mui-ellipsis'>
+                                    <!-- class="mui-pull-left"控制在左边  
+                                                         class="mui-pull-right"控制在右边
+                                                         类似flex布局中的主轴设置左右两边靠样式 -->
+                                    <span class="mui-pull-left">京东商城 | 10-25 14:10</span>
+                                    <!--  class="mui-pull-right"控制在右边 -->
+                                    <span class="mui-pull-right productComCount" data-product-com-count="有5上个世纪"> <i
+                                            class="fa fa-commenting-o"></i>
+                                        有5上个世纪
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 页码部分 -->
+    <section id="page">
+        <!-- 上一页 -->
+        <a href="#" class="mui-btn mui-btn-outlined  beforePage">上一页</a>
+        <!-- 中间选择页码 -->
+        <select name="selectAge" id="selectAge">
+
+            <option value="1">1/15</option>
+            <option value="2">2/15</option>
+            <option value="3">3/15</option>
+            <option value="4">4/15</option>
+            <option value="5">5/15</option>
+            <option value="6">6/15</option>
+            <option value="7">7/15</option>
+            <option value="8">8/15</option>
+            <option value="9">9/15</option>
+            <option value="10">10/15</option>
+            <option value="11">11/15</option>
+            <option value="12">12/15</option>
+            <option value="13">13/15</option>
+            <option value="14">14/15</option>
+            <option value="15">15/15</option>
+        </select>
+        <!-- 下一页 -->
+        <a href="#" class="mui-btn mui-btn-outlined afterPage">下一页</a>
+    </section>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="foot_top">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="javascript:;" style="width: 40%; border: 0;" id="rtt">
+                <img src="../images/top.png">返回顶部
+            </a>
+        </div>
+        <div class="foot_bottom">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="index.htm">慢慢买手机版 -- 掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+    <!-- 创建模板 -->
+    <script id="moneyctrltpl" type="text/html">
+{{each result value index}}
+<li class="mui-table-view-cell mui-media" data-id="{{value.productId}}">
+        <a href="javascript:;">
+                {{@value.productImgSm}}
+            <div class="mui-media-body">
+                    <p class="product-name">{{value.productName}}<span>{{value.productPinkage}}</span></p>
+                <p class='mui-ellipsis'>
+                    <!-- class="mui-pull-left"控制在左边  
+                                         class="mui-pull-right"控制在右边
+                                         类似flex布局中的主轴设置左右两边靠样式 -->
+                                         <span class="mui-pull-left">{{value.productFrom}} | {{value.productTime}}</span>
+                    <!--  class="mui-pull-right"控制在右边 -->
+                    <span class="mui-pull-right productComCount"> <i class="fa fa-commenting-o"></i>
+                        {{value.productComCount.replace('有','').replace('人评论','')}}
+                    </span>
+                </p>
+            </div>
+        </a>
+    </li>
+{{/each}}
+</script>
+
+    </script>
+    <script src="../lib/jquery/jquery-3.1.1.min.js"></script>
+    <script src="../lib/mui/js/mui.js"></script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/moneyctrl.js"></script>
+</body>
+
+</html>

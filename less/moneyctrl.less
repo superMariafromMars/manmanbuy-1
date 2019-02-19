@@ -1,0 +1,82 @@
+
+@import "base.less";
+// 头部共有样式
+#header{
+    z-index: 99;
+}
+// 底部共有样式
+#footer{
+    z-index: 99;
+}
+//中间公共样式
+body{
+    overflow: hidden;
+}
+#main{
+    flex:1;
+    overflow: hidden;
+    position: relative;
+//    margin-top: .5rem;
+    margin-bottom: 1.93rem;
+     
+.mui-scroll-wrapper {
+  height: 100%;
+    .mui-table-view:after{
+        left:.2rem; 
+    }
+    .mui-media{
+        a{  
+           
+           display: flex;
+            img{
+                width: 1rem;
+                height: 1rem;
+                max-width: 1rem;
+                margin-right: .1rem;
+            }
+       
+        }
+       
+    }
+    .mui-media-body{
+        flex: 1;
+        .product-name{
+            // white-space: nowrap;  规定段落不换行
+            white-space: normal;   //规定段落换行
+            color: black;
+            span{
+                color: red;
+            }
+        }
+        .mui-ellipsis{
+            margin-top: .2rem;
+        }
+    }
+}
+
+}
+#page{
+    position: absolute;
+    bottom: 1.18rem;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: 0.2rem 0.3rem;
+    background-color: #fff;
+    
+a{ 
+    height: 0.35rem;
+    background: #d4d4d4;
+    flex: 1;
+    border-radius: 0.05rem;
+    box-shadow: 0rem 0rem 0.05rem #ccc;
+
+}
+#selectAge{
+    flex: 1;
+    margin-bottom: 0;
+    padding: 0;
+    border:1px solid #cccccc !important;
+    margin:0 0.3rem ;
+}
+}

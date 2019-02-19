@@ -1,0 +1,238 @@
+html {
+  /* 设置 根元素在 375屏幕下的时候 是100px   100px就是 26.66667vw */
+  font-size: 26.66667vw;
+}
+body {
+  font-size: .14rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: middle;
+  border: none;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+em,
+i {
+  font-style: normal;
+}
+input {
+  outline: none;
+  border: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+#header {
+  background-color: #ff4e49;
+  height: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 .1rem;
+}
+#header .logo a {
+  display: block;
+}
+#header .logo a img {
+  height: .25rem;
+}
+#header .appdown a {
+  display: block;
+}
+#header .appdown a img {
+  height: .34rem;
+}
+#footer {
+  background-color: #232a34;
+  height: 1.18rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+#footer .foot_top {
+  height: .34rem;
+  line-height: .34rem;
+  border-bottom: 1px solid #727272;
+  text-align: center;
+  display: flex;
+}
+#footer .foot_top a {
+  color: #fff;
+  font-size: .14rem;
+  width: 33.3%;
+}
+#footer .foot_top a:nth-child(n+1) {
+  border-right: 1px solid #727272;
+}
+#footer .foot_top a:last-child img {
+  width: .16rem;
+  margin-right: .05rem;
+}
+#footer .foot_bottom {
+  padding: .15rem 0;
+}
+#footer .foot_bottom p {
+  color: #666;
+  font-size: .12rem;
+}
+#footer .foot_bottom p a {
+  color: #ff4e49;
+}
+#footer .foot_bottom p a:last-child {
+  color: #bebebe;
+}
+body {
+  background: #fff;
+}
+#header {
+  z-index: 99;
+}
+#footer {
+  z-index: 99;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1.18rem;
+  padding: .15rem .15rem 0 .15rem ;
+}
+#main .mui-scroll-wrapper {
+  padding: .15rem .15rem .15rem .15rem ;
+}
+#main .mui-scroll-wrapper .mui-scroll {
+  position: relative;
+}
+#main .mui-scroll-wrapper .mui-scroll .title {
+  font-weight: 600;
+  color: #5a5a5a;
+}
+#main .mui-scroll-wrapper .mui-scroll .price {
+  width: 100%;
+  color: red;
+  font-weight: 600;
+}
+#main .mui-scroll-wrapper .mui-scroll .info {
+  width: 100%;
+  padding: .1rem 0;
+  color: #999;
+  font-size: .12rem;
+}
+#main .mui-scroll-wrapper .mui-scroll .particulars {
+  display: flex;
+  width: 100%;
+}
+#main .mui-scroll-wrapper .mui-scroll .particulars .left {
+  width: 50%;
+  white-space: normal;
+  color: #606060;
+  font-size: .16rem;
+}
+#main .mui-scroll-wrapper .mui-scroll .particulars .image {
+  width: 50%;
+}
+#main .mui-scroll-wrapper .mui-scroll .particulars .image img {
+  width: 100%;
+}
+#main .mui-scroll-wrapper .mui-scroll .activity {
+  color: #606060;
+  font-size: .16rem;
+}
+#main .mui-scroll-wrapper .mui-scroll .sauce {
+  width: 2.15rem;
+  height: 2.15rem;
+}
+#main .mui-scroll-wrapper .mui-scroll .sauce img {
+  width: 100%;
+}
+#main .mui-scroll-wrapper .mui-scroll .shopping {
+  width: 100%;
+  background-color: red;
+  color: #fff;
+  margin: .3rem 0;
+  display: block;
+  line-height: .36rem;
+  border-radius: .05rem;
+  text-align: center;
+  margin-right: .15rem;
+}
+#comment {
+  padding: 0.1rem;
+}
+#comment .form {
+  position: relative;
+}
+#comment .form input {
+  position: absolute;
+  right: 0.01rem;
+  bottom: 0.2rem;
+  background: #ff4e49;
+  color: #fff;
+  border: none;
+}
+#comment .list ul li {
+  margin-bottom: 0.2rem;
+}
+#comment .list ul li .userimg {
+  float: left;
+  margin-right: 0.2rem;
+}
+#comment .list ul li .userimg img {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+}
+#comment .list ul li .clearfix {
+  height: 0.25rem;
+}
+#comment .list ul li .clearfix:after {
+  content: "020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+}
+#comment .list ul li .content {
+  font-size: 0.14rem;
+  color: #606060;
+  overflow: hidden;
+}
+#comment .list ul li .yinyong {
+  overflow: hidden;
+}
+#comment .list ul li .username {
+  color: skyblue;
+  font-size: 0.12rem;
+  float: left;
+}
+#comment .list ul li .time {
+  float: right;
+  font-size: 0.12rem;
+  color: #999999;
+}
