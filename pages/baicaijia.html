@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价</title>
+    <!-- 引入css less文件 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet/less" href="../less/baicaijia.less">
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <!-- 网页顶部 -->
+        <div class="pageTop">
+            <i class="fa fa-angle-left"></i>
+            <span class="center">白菜价-淘宝内部券</span>
+            <img src="../images/header_app.png" class="right">
+        </div>
+
+        <!-- 导航条 -->
+        <nav id="nav">
+            <div class="menu">
+                <!-- 区域滚动部分 -->
+                <div class="mui-scroll-wrapper menuBox">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <ul class="titleBox">
+                            <li class="active">全部</li>
+                            <li>热销</li>
+                            <li>9块邮</li>
+                            <li>19块邮</li>
+                            <li>数码家</li>
+                            <li>数码家电</li>
+                            <li>居家</li>
+                            <li>美食</li>
+                            <li>男装</li>
+                            <li>女装</li>
+                        </ul>
+                    </div>
+                </div>
+                <i class="fa fa-sliders showSearch"></i>
+            </div>
+            <form action="#" class="search-form">
+                <div class="form-group searchBox">
+                    <input type="text" class="form-control" placeholder="请输入搜索的商品">
+                    <label>搜索</label>
+                </div>
+            </form>
+        </nav>
+    </header>
+
+    <!-- 主体部分 -->
+    <main id="main">
+        <!-- 列表组件 图文列表 -->
+        <ul class="mui-table-view productLists">
+            <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;">
+                    <img class="mui-media-object mui-pull-left left-img" src="../images/banner05.jpg">
+                    <div class="mui-media-body">
+                        <p class='mui-ellipsis title'>[包邮]双十一红包 今日开启</p>
+                        <p class="price">
+                            卷后
+                            <strong>￥88.88</strong>
+                            <del>￥288.88</del>
+                        </p>
+                        <!-- 进度条 -->
+                        <div class="processBar">
+                            <i class="bar">
+                                <span>1%</span>
+                            </i>
+                            <strong>已领82张</strong>
+                        </div>
+                        <div class="btns">
+                            <span>点此领15元优惠券</span>
+                            <button type="button" class="mui-btn mui-btn-danger orderLink">下单链接</button>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;">
+                    <img class="mui-media-object mui-pull-left left-img" src="../images/banner04.jpg">
+                    <div class="mui-media-body">
+                        <p class='mui-ellipsis title'>[包邮]双十一红包 今日开启</p>
+                        <p class="price">
+                            卷后
+                            <strong>￥88.88</strong>
+                            <del>￥288.88</del>
+                        </p>
+                        <!-- 进度条 -->
+                        <div class="bar">
+                            <i></i>
+                            <strong>已领82张</strong>
+                        </div>
+                        <div class="btns">
+                            <span>点此领15元优惠券</span>
+                            <button type="button" class="mui-btn mui-btn-danger orderLink">下单链接</button>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media">
+                <img class="mui-media-object mui-pull-left left-img" src="../images/banner03.jpg">
+                <div class="mui-media-body">
+                    <p class='mui-ellipsis title'>[包邮]双十一红包 今日开启</p>
+                    <p class="price">
+                        卷后
+                        <strong>￥88.88</strong>
+                        <del>￥288.88</del>
+                    </p>
+                    <!-- 进度条 -->
+                    <div class="bar">
+                        <i></i>
+                        <strong>已领82张</strong>
+                    </div>
+                    <div class="btns">
+                        <span>点此领15元优惠券</span>
+                        <button type="button" class="mui-btn mui-btn-danger orderLink">下单链接</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <!-- 回到顶部 -->
+    <section id="backTop">
+        <span class="glyphicon glyphicon-plane"></span>
+        <p>回到顶部</p>
+    </section>
+
+    <!-- 准备一个模板 写所有的tan栏title结构 -->
+    <script type="text/html" id="titleTpl">
+        {{ each result value index }}
+         <li data-titleId="{{ value.titleId }}" class="{{ index==0?'active':'' }}"><span>{{ value.title }}</span></li>
+        {{ /each }}
+    </script>
+
+    <!-- 准备一个模板 写所有的产品列表数据 -->
+    <script type="text/html" id="productTpl">
+        {{ each result value }}
+        <li class="mui-table-view-cell mui-media">
+            <div class="mui-media-object mui-pull-left" id>
+                {{#value.productImg}}
+            </div>
+            <div class="mui-media-body">
+                <p class='mui-ellipsis title'>{{#value.productName}}</p>
+                <p class="price"><span>卷后</span> <strong>¥0.0</strong><del>¥0</del></p>
+                <p class="processBar">{{#value.productCouponRemain}}</p>
+                <p class="btns">{{#value.productCoupon}}{{#value.productHref}}</p>
+            </div>
+        </li>
+        {{ /each }}        
+    </script>
+
+    <!-- 引入外部 js资源文件 -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../js/baicaijia.js"></script>
+</body>
+
+</html>

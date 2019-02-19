@@ -1,0 +1,222 @@
+html {
+  /* 设置 根元素在 375屏幕下的时候 是100px   100px就是 26.66667vw */
+  font-size: 26.66667vw;
+}
+body {
+  font-size: .14rem;
+  background-color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: middle;
+  border: none;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+em,
+i {
+  font-style: normal;
+}
+input {
+  outline: none;
+  border: none;
+}
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+#header .pageTop {
+  height: .45rem;
+  display: flex;
+  align-items: center;
+  background-color: #ff841d;
+  color: #fff;
+  text-align: center;
+  font-size: .18rem;
+}
+#header .pageTop .fa {
+  width: .35rem;
+  height: .35rem;
+  line-height: .35rem;
+  margin-left: .05rem;
+}
+#header .pageTop .center {
+  flex: 1;
+}
+#header .pageTop img {
+  width: .35rem;
+  height: .35rem;
+  margin-right: .05rem;
+}
+#header #nav .menu {
+  position: relative;
+}
+#header #nav .menu .menuBox {
+  height: .48rem;
+  background-color: #f2f2f2;
+  position: relative;
+}
+#header #nav .menu .menuBox > .mui-scroll {
+  background-color: #fff;
+  height: .38rem;
+  width: 7.8rem;
+}
+#header #nav .menu .menuBox > .mui-scroll ul {
+  width: 100%;
+}
+#header #nav .menu .menuBox > .mui-scroll ul li {
+  display: inline-block;
+  height: .38rem;
+  line-height: .38rem;
+  padding: 0 .16rem;
+  font-size: .14rem;
+}
+#header #nav .menu .menuBox > .mui-scroll ul li.active {
+  border-bottom: 0.02rem solid #e4393c;
+  color: #e4393c;
+}
+#header #nav .menu .showSearch {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  width: .38rem;
+  height: .48rem;
+  text-align: center;
+  line-height: .38rem;
+  font-size: .24rem;
+  color: #999;
+  background-color: #f2f2f2;
+}
+#header #nav .search-form {
+  display: none;
+}
+#header #nav .search-form .searchBox {
+  background-color: #f2f2f2;
+  padding: .1rem;
+  padding-top: 0;
+  margin-bottom: 0;
+  display: flex;
+}
+#header #nav .search-form .searchBox input {
+  flex: 1;
+  height: .35rem;
+  margin-bottom: 0;
+}
+#header #nav .search-form .searchBox label {
+  margin-bottom: 0;
+  width: .5rem;
+  height: .35rem;
+  text-align: center;
+  line-height: .35rem;
+}
+#main {
+  margin-top: .93rem;
+}
+#main .productLists::before,
+#main .productLists::after {
+  height: 0;
+}
+#main .productLists li {
+  display: block;
+}
+#main .productLists li > .mui-pull-left {
+  width: 1.43rem;
+  height: 1.43rem;
+  max-width: 30rem;
+  margin-right: 0;
+}
+#main .productLists li > .mui-pull-left > img {
+  width: 1.43rem;
+  height: 1.43rem;
+}
+#main .productLists li .mui-media-body {
+  padding: .1rem;
+}
+#main .productLists li .mui-media-body .title {
+  color: #000;
+  line-height: .33rem;
+}
+#main .productLists li .mui-media-body .price {
+  color: #e4393c;
+  line-height: .35rem;
+  font-size: .14rem;
+}
+#main .productLists li .mui-media-body .price strong {
+  color: #e4393c;
+  font-size: .18rem;
+  margin-right: .05rem;
+}
+#main .productLists li .mui-media-body .price del {
+  color: #999;
+}
+#main .productLists li .mui-media-body .bar {
+  height: .35rem;
+  line-height: .35rem;
+}
+#main .productLists li .mui-media-body .bar i span {
+  text-align: center;
+  display: inline-block;
+  width: .8rem;
+  height: .15rem;
+  line-height: .15rem;
+  border: 0.01rem solid #e4393c;
+  border-radius: .08rem;
+  color: #e4393c;
+  background-color: pink;
+}
+#main .productLists li .mui-media-body .bar b {
+  margin-left: .1rem;
+  font-size: .12rem;
+  color: #e4393c;
+}
+#main .productLists li .mui-media-body .btns {
+  display: flex;
+  justify-content: space-between;
+}
+#main .productLists li .mui-media-body .btns > a {
+  font-size: .12rem;
+  line-height: .12rem;
+  height: .26rem;
+}
+#main .productLists li .mui-media-body .btns > a:first-of-type {
+  border: 0.01rem dotted #e4393c;
+  color: #e4393c;
+  padding: .05rem;
+}
+#main .productLists li .mui-media-body .btns > a:last-of-type {
+  padding: 0.07rem;
+  margin-left: .05rem;
+  color: #fff;
+  background-color: #e4393c;
+  border-radius: .03rem;
+}
+#backTop {
+  display: none;
+  position: fixed;
+  right: .2rem;
+  bottom: .1rem;
+  z-index: 99;
+  background-color: #ff841d;
+  opacity: .7;
+  text-align: center;
+  padding: .05rem .1rem;
+  color: #fff;
+  border-radius: 50%;
+}
+#backTop span {
+  font-size: .28rem;
+}
+#backTop p {
+  font-size: .12rem;
+  margin-bottom: 0;
+  color: #fff;
+}

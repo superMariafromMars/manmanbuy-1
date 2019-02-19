@@ -66,9 +66,6 @@ body {
 #header .appdown a img {
   height: .34rem;
 }
-#mian {
-  flex: 1;
-}
 #footer {
   background-color: #232a34;
   height: 1.18rem;
