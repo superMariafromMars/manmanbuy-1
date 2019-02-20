@@ -1,0 +1,167 @@
+/* 慢慢买主题颜色 */
+/* a的颜色 */
+/* 边框颜色 */
+* {
+  margin: 0rem;
+  padding: 0rem;
+}
+html {
+  font-size: 100px;
+}
+body {
+  font-size: 0.16rem;
+  height: 100vh;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  color: #666;
+}
+#footer {
+  padding-top: 10px;
+}
+#footer .top {
+  display: flex;
+}
+#footer .top a {
+  flex: 1;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+#footer .bottom {
+  background-color: black;
+  height: 100px;
+  padding-top: 20px;
+  text-align: center;
+}
+#header .top {
+  display: flex;
+  width: 100%;
+  background-color: hotpink;
+  justify-content: space-between;
+}
+#header .top .logo {
+  display: block;
+  height: 45px;
+}
+#header .top .logo img {
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 25px;
+}
+#header .top .download {
+  height: 100%;
+  display: block;
+  height: 45px;
+}
+#header .top .download img {
+  height: 90%;
+}
+#header form {
+  flex: 1;
+  display: flex;
+  padding-top: 10px;
+}
+#header form > input:first-of-type {
+  width: 100%;
+  height: 30px;
+  border: 0px;
+  border-radius: 15px;
+  background-color: white;
+  padding-left: 10px;
+  text-align: left;
+}
+#header form > input:last-of-type {
+  border-radius: 15px;
+  background-color: grey;
+  color: white;
+  height: 30px;
+}
+#header .download {
+  width: 60px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 14px;
+  color: red;
+}
+#main #nav {
+  padding-top: 30px;
+  background-color: white;
+}
+#main #nav .mui-row .mui-col-xs-3 a {
+  display: block;
+  text-align: center;
+}
+#main #nav .mui-row .mui-col-xs-3 a img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+#main #productList .title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 10px;
+  color: white;
+  background-color: red;
+  height: 20px;
+}
+#main #productList .title i {
+  display: block;
+  line-height: 20px;
+}
+#main #productList .content ul li a {
+  display: flex;
+  padding: 20px;
+}
+#main #productList .content ul li a .left img {
+  height: 150px;
+}
+#main #productList .content ul li a .right {
+  background-color: #fff;
+  flex: 1;
+}
+#main #productList .content ul li a .right p {
+  margin-bottom: 50px;
+}
+#main #productList .more-bar {
+  background-color: #fff;
+  text-align: center;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  width: 95%;
+  margin: 0 auto;
+}
+#main #productList #recommen a {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 10px;
+  color: white;
+  background-color: red;
+  height: 20px;
+}
+#main #productList #recommen a i {
+  display: block;
+  line-height: 20px;
+}
+#footer {
+  padding-top: 10px;
+}
+#footer .top {
+  display: flex;
+}
+#footer .top a {
+  flex: 1;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+#footer .bottom {
+  background-color: black;
+  height: 100px;
+  padding-top: 20px;
+  text-align: center;
+}

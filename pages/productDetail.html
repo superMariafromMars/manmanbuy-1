@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>主页</title>
+    <link rel="stylesheet" type="text/css" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" type="text/css" href="../lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="../less/productDetail.less">
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="top">
+            <a href="#" title="" class="logo">
+                <!-- <img src="http://static.manmanbuy.com/m/img/mlogo.png" alt=""> -->
+                <img src="../images/header_logo.png" alt="">
+            </a>
+            <a href="#" title="" class="download">
+                <img src="../images//header_app.png" alt="">
+            </a>
+        </div>
+        <div class="detail-select">
+            <div class="left">
+                <span>首页</span><i>></i><span>全部分类</span><i>></i><span class="productClass"></span>
+            </div>
+            <button type="button" class="btn-shaixuan">筛选</button>
+        </div>
+    </header>
+    <main id="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="product-introduce">
+                    <span class='title'>创维(Skyworth) 50M5 50英寸 超高清 智能网络LED液晶电视</span>
+                    <div>
+
+                    </div>
+                    <div>
+                        <span>比价购买</span>
+                        <span>产品参数</span>
+                        <span>优选评论</span>
+                    </div>
+                    <div>
+                        <div class="title">
+                            <span><i></i> 飞牛网</span>
+                            <div class="right">
+                                <span>￥2499.00</span>
+                                <button>去购买</button>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p>* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <p class="title-2">网友评价</p>
+                        <div class="content">
+                            <div class="top">
+                                <div>
+                                    <span class="name">C***K</span>
+                                    <span class="time">2015</span>
+                                </div>
+                            </div>
+                            <div class="center">
+                                <span>
+                                    <i>★</i>
+                                    <i>★</i>
+                                    <i>★</i>
+                                    <i>★</i>
+                                    <i>★</i>
+                                </span>
+                                <span>购买自京东商城</span>
+                            </div>
+                            <span class="comment">
+                                '屏幕很大，看起来很舒服。清晰度也不错，功能很多，外观很漂亮，放大厅刚合适。画面也很清晰，色彩度好。音质效果也不错。很值得购买。第二次购买了。以后推荐朋友也买这款。'
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="top">
+            <a href="javascript:0">登录</a>
+            <a href="javascript:0">注册</a>
+            <a href="javascript:0">
+                返回顶部
+                <i class="fa fa-chevron-circle-right"></i>
+            </a>
+        </div>
+        <div class="bottom">
+            <p><a href="javascript:0">
+                    手机App下载
+                </a>
+                <a href="javascript:0">
+                    慢慢买手机版 -- 掌上比价平台
+                </a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script type="text/html" id="comment">
+        {{each result value index}}
+        <div class="content">
+            <div class="top">
+                <div>
+                    <span class="name">{{value.comName}}</span>
+                    <span class="time">{{value.comTime}}</span>
+                </div>
+            </div>
+            <div class="center">
+                <span>
+                    <i>★</i>
+                    <i>★</i>
+                    <i>★</i>
+                    <i>★</i>
+                    <i>★</i>
+                </span>
+                <span>{{value.comFrom}}</span>
+            </div>
+            <span class="comment">
+                {{value.comContent}}
+                            </span>
+        </div>
+        {{/each}}
+    </script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+</body>
+<script>
+
+    $(function () {
+        mui('.mui-scroll-wrapper').scroll({
+            deceleration: 0.0005,//flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+            scrollY: true, //是否竖向滚动
+            scrollX: false, //是否横向滚动
+            bounce: true,//是否启用回弹
+            indicators: false //是否显示滚动条
+        });
+        mui('.mui-scroll-wrapper').scroll({
+            deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+        });
+    })
+</script>
+
+<script>
+    //标题栏的渲染
+    $(function () {
+        // 获取传过来的id
+        function getId(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); //定义正则表达式 
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return decodeURI(r[2]);
+            return null;
+        }
+        var id = getId('productId');
+        var categoryid = getId('categoryid');
+
+        $('.detail-select .left').children().eq(0).on('tap', function () {
+            location = 'index.html';
+        })
+        $('.detail-select .left').children().eq(2).on('tap', function () {
+            location = 'category.html';
+        })
+        $('.productClass').on('tap', function () {
+            location = 'productList.html?id=' + id;
+        });
+        $.ajax({
+            url: 'http://localhost:9090/api/getcategorybyid',
+            data: { categoryid: categoryid },
+            success: function (data) {;
+                $('.productClass').html(data.result[0].category);
+                category = data.result[0].category;
+                $('.productClass').on('tap', function () {
+                    location = 'productList.html?id=' + categoryid;
+                })
+            }
+        })
+        $.ajax({
+            url: 'http://localhost:9090/api/getproduct',
+            data: { productid: id },
+            success: function (data) {
+                console.log(data);
+                console.log($('.product-introduce').children().eq(0));
+
+                $('.product-introduce').children().eq(0).html(data.result[0].productName);
+                $('.product-introduce').children().eq(1).html(data.result[0].productImg);
+            }
+        })
+        $.ajax({
+            url: 'http://localhost:9090/api/getproductcom',
+            data: { productid: id },
+            success: function (data) {
+                var html = template('comment', data);
+                $('.content').html(html);
+            }
+        })
+    })
+</script>
+
+</html>

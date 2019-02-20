@@ -1,0 +1,135 @@
+/* 慢慢买主题颜色 */
+/* a的颜色 */
+/* 边框颜色 */
+* {
+  margin: 0rem;
+  padding: 0rem;
+}
+html {
+  font-size: 100px;
+}
+body {
+  font-size: 0.16rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  color: #666;
+}
+#header {
+  height: 100px;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+#footer .top {
+  display: flex;
+}
+#footer .top a {
+  flex: 1;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+#footer .bottom {
+  background-color: black;
+  height: 100px;
+  padding-top: 20px;
+  text-align: center;
+}
+#header .top {
+  display: flex;
+  width: 100%;
+  background-color: hotpink;
+  justify-content: space-between;
+}
+#header .top .logo {
+  display: block;
+  height: 45px;
+}
+#header .top .logo img {
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 25px;
+}
+#header .top .download {
+  height: 100%;
+  display: block;
+  height: 45px;
+}
+#header .top .download img {
+  height: 90%;
+}
+#header .download {
+  width: 60px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 14px;
+  color: red;
+}
+#header .detail-select {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background: linear-gradient(to bottom, #fff, #ddd);
+}
+#header .detail-select .left {
+  line-height: 33px;
+}
+#header .detail-select .btn-shaixuan {
+  width: 50px;
+  background: linear-gradient(to top, #fff, #ddd);
+}
+#main .productList {
+  display: block;
+  background-color: #fff;
+}
+#main .productList .top {
+  display: flex;
+}
+#main .productList .top img {
+  width: 100px;
+  height: 100px;
+}
+#main .productList .introduce {
+  padding: 10px;
+}
+#main .productList .introduce .title {
+  font-size: 0.14rem;
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+  color: black;
+}
+#main .productList .introduce .price {
+  display: flex;
+  justify-content: space-between;
+}
+#main .productList .introduce .price span:first-of-type {
+  color: red;
+  font-size: 20px;
+}
+#main .productList .introduce .price span:last-of-type {
+  color: gold;
+}
+#main .productList .introduce .price span:last-of-type i {
+  font-style: normal;
+}
+#main .productList .bottom {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  padding-right: 10px;
+}
+#main .pageList {
+  display: flex;
+  justify-content: center;
+}
+#main .pageList span {
+  margin-right: 10px;
+}

@@ -1,0 +1,156 @@
+@import './base.less';
+#header{
+	.top{
+		display: flex;
+		width: 100%;	
+		background-color: hotpink;
+	    justify-content: space-between;
+		.logo{
+			display: block;
+			height: 45px;
+			img{
+				margin-left: 10px;
+				margin-top: 10px;
+				height: 25px;
+			}
+		}
+		.download{
+			height: 100%;
+			display: block;
+			height: 45px;
+			img{
+				height: 90%;
+			}
+		}
+	}
+	
+	
+	form{
+		flex:1;
+		display: flex;
+		padding-top: 10px;
+		>input:first-of-type{
+			width: 100%;
+			height: 30px;
+			border:0px;
+			border-radius:15px;
+			background-color: white;
+			padding-left: 10px;
+			text-align: left;
+		}
+		>input:last-of-type{
+			border-radius:15px;
+			background-color: grey;
+			color: white;
+			height: 30px;
+		}
+	}
+	.download{
+		width: 60px;
+		line-height: 45px;
+		text-align: center;
+		font-size: 14px;
+		color:red;
+	}
+}
+
+#main{
+	#nav{
+		padding-top: 30px;		
+		background-color: white;
+		.mui-row{
+			.mui-col-xs-3{
+				a{
+					display: block;
+					text-align: center;
+					img{
+						width: 50px;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+	#productList{
+		.title{
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			padding: 0 10px;
+			color:white;
+			background-color: red;
+			height: 20px;
+			span{
+
+			}
+			i{
+				display: block;
+				line-height: 20px;
+			}
+		}
+		.content{
+			ul{
+				li{
+					a{
+						display: flex;
+						padding: 20px;
+						.left{
+							img{
+								height: 150px;
+							}
+						}
+						.right{
+							background-color: #fff;
+							flex:1;
+							p{
+								margin-bottom: 50px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.more-bar{
+			background-color: #fff;
+			text-align: center;
+			height: 30px;
+			font-size: 14px;
+			line-height: 30px;
+			width: 95%;
+			margin: 0 auto;
+		}
+		#recommen{
+			a{
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				padding: 0 10px;
+				color:white;
+				background-color: red;
+				height: 20px;
+				i{
+					display: block;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
+#footer{
+	padding-top: 10px;
+	.top{
+		display: flex;
+		a{
+			flex:1;
+			text-align: center;
+			background-color: black;
+			color: white;
+		}
+	}
+	.bottom{
+		background-color: black;
+		height: 100px;
+		padding-top: 20px;
+		text-align: center;
+	}
+}

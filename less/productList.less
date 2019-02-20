@@ -1,0 +1,97 @@
+@import './base.less';
+
+#header{
+	.top{
+		display: flex;
+		width: 100%;	
+		background-color: hotpink;
+	    justify-content: space-between;
+		.logo{
+			display: block;
+			height: 45px;
+			img{
+				margin-left: 10px;
+				margin-top: 10px;
+				height: 25px;
+			}
+		}
+		.download{
+			height: 100%;
+			display: block;
+			height: 45px;
+			img{
+				height: 90%;
+			}
+		}
+	}
+
+	.download{
+		width: 60px;
+		line-height: 45px;
+		text-align: center;
+		font-size: 14px;
+		color:red;
+    }
+    .detail-select{
+        display: flex;
+        justify-content: space-between; 
+        padding:5px 10px;
+        background: linear-gradient(to bottom, #fff, #ddd);
+        .left{
+            line-height: 33px;
+        }
+        .btn-shaixuan{
+            width: 50px;
+            background: linear-gradient(to top, #fff, #ddd);
+        }
+    }
+}
+#main{
+    .productList{
+            display: block;
+            background-color: #fff;
+        .top{
+            display:flex;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        .introduce{
+            padding: 10px;
+            .title{
+                  font-size: 0.14rem;
+                  margin-top: 0;
+                  margin-bottom: 0.1rem;
+                  color: black;
+            }
+            .price{
+                display: flex;
+                justify-content: space-between;
+                span:first-of-type{
+                    color: red;
+                    font-size: 20px;
+                }
+                span:last-of-type{
+                    color: gold;
+                    i{
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+        .bottom{
+            display: flex;
+            justify-content: flex-end;
+            font-size: 14px;
+            padding-right: 10px;
+        }
+        }
+        .pageList{
+            display: flex;
+            justify-content: center;
+            span{
+                margin-right: 10px;
+            }
+        }
+}

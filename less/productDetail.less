@@ -1,0 +1,147 @@
+@import './base.less';
+#header{
+	.top{
+		display: flex;
+		width: 100%;	
+		background-color: hotpink;
+	    justify-content: space-between;
+		.logo{
+			display: block;
+			height: 45px;
+			img{
+				margin-left: 10px;
+				margin-top: 10px;
+				height: 25px;
+			}
+		}
+		.download{
+			height: 100%;
+			display: block;
+			height: 45px;
+			img{
+				height: 90%;
+			}
+		}
+	}
+
+	.download{
+		width: 60px;
+		line-height: 45px;
+		text-align: center;
+		font-size: 14px;
+		color:red;
+    }
+    .detail-select{
+        display: flex;
+        justify-content: space-between; 
+        padding:5px 10px;
+        background: linear-gradient(to bottom, #fff, #ddd);
+        .left{
+            line-height: 33px;
+        }
+        .btn-shaixuan{
+            width: 50px;
+            background: linear-gradient(to top, #fff, #ddd);
+        }
+    }
+}
+#main{
+    .product-introduce{
+        background-color: #fff;
+        .title{
+            display: block;
+            padding: 20px 10px 0px 10px ;
+            font-size: 14px;
+            text-align: center;
+        }
+        >div:nth-child(2){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        >div:nth-child(3){
+            display: flex;
+            color: #fff;
+            span{
+                padding: 6px;
+                flex:1;
+                background-color: yellow;
+                text-align: center;
+            }
+            >span:nth-of-type(1){
+                background-color: #fe9f29;
+            }
+            >span:nth-of-type(3){
+                background-color: #fec42c;
+            }
+        }
+        >div:nth-child(4){
+            .title{
+                padding: 0 10px;
+                display: flex;
+                justify-content: space-between;
+                &:nth-child(1){
+                    line-height: 33px;
+                }
+               .right{
+                   span{
+                       color: red;
+                   }
+                   button{
+                       background-color: #fe5406;
+                       color: white;
+                       height: 30px;
+                   }
+                }
+            }
+            .bottom{
+                padding: 5px;
+                border-top: 1px solid grey;
+                border-bottom: 3px solid grey;
+                p{
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+        .comment{
+            .title-2{
+                padding:  0;
+                margin:0;
+                font-size: 16px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                background-color: grey;
+                color: white;
+            }
+            .content{
+                padding: 10px;
+                .top{
+                    div{
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 14px;
+                    }
+                }
+                .center{
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 14px;
+                    span:nth-of-type(1){
+                        color: red;
+                        i{
+                            font-style: normal;
+                        }
+                    }
+                }
+                .comment{
+                    display: block;
+                    padding: 10px 0;
+                    font-size: 14px;
+                    border-bottom: 1px solid grey;
+                }
+            }
+        }
+    }
+}

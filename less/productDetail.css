@@ -1,0 +1,178 @@
+/* 慢慢买主题颜色 */
+/* a的颜色 */
+/* 边框颜色 */
+* {
+  margin: 0rem;
+  padding: 0rem;
+}
+html {
+  font-size: 100px;
+}
+body {
+  font-size: 0.16rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  color: #666;
+}
+#header {
+  height: 100px;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+#footer .top {
+  display: flex;
+}
+#footer .top a {
+  flex: 1;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+#footer .bottom {
+  background-color: black;
+  height: 100px;
+  padding-top: 20px;
+  text-align: center;
+}
+#header .top {
+  display: flex;
+  width: 100%;
+  background-color: hotpink;
+  justify-content: space-between;
+}
+#header .top .logo {
+  display: block;
+  height: 45px;
+}
+#header .top .logo img {
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 25px;
+}
+#header .top .download {
+  height: 100%;
+  display: block;
+  height: 45px;
+}
+#header .top .download img {
+  height: 90%;
+}
+#header .download {
+  width: 60px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 14px;
+  color: red;
+}
+#header .detail-select {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background: linear-gradient(to bottom, #fff, #ddd);
+}
+#header .detail-select .left {
+  line-height: 33px;
+}
+#header .detail-select .btn-shaixuan {
+  width: 50px;
+  background: linear-gradient(to top, #fff, #ddd);
+}
+#main .product-introduce {
+  background-color: #fff;
+}
+#main .product-introduce .title {
+  display: block;
+  padding: 20px 10px 0px 10px ;
+  font-size: 14px;
+  text-align: center;
+}
+#main .product-introduce > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main .product-introduce > div:nth-child(3) {
+  display: flex;
+  color: #fff;
+}
+#main .product-introduce > div:nth-child(3) span {
+  padding: 6px;
+  flex: 1;
+  background-color: yellow;
+  text-align: center;
+}
+#main .product-introduce > div:nth-child(3) > span:nth-of-type(1) {
+  background-color: #fe9f29;
+}
+#main .product-introduce > div:nth-child(3) > span:nth-of-type(3) {
+  background-color: #fec42c;
+}
+#main .product-introduce > div:nth-child(4) .title {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+#main .product-introduce > div:nth-child(4) .title:nth-child(1) {
+  line-height: 33px;
+}
+#main .product-introduce > div:nth-child(4) .title .right span {
+  color: red;
+}
+#main .product-introduce > div:nth-child(4) .title .right button {
+  background-color: #fe5406;
+  color: white;
+  height: 30px;
+}
+#main .product-introduce > div:nth-child(4) .bottom {
+  padding: 5px;
+  border-top: 1px solid grey;
+  border-bottom: 3px solid grey;
+}
+#main .product-introduce > div:nth-child(4) .bottom p {
+  padding: 0;
+  margin: 0;
+}
+#main .product-introduce .comment .title-2 {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: grey;
+  color: white;
+}
+#main .product-introduce .comment .content {
+  padding: 10px;
+}
+#main .product-introduce .comment .content .top div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+#main .product-introduce .comment .content .center {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+#main .product-introduce .comment .content .center span:nth-of-type(1) {
+  color: red;
+}
+#main .product-introduce .comment .content .center span:nth-of-type(1) i {
+  font-style: normal;
+}
+#main .product-introduce .comment .content .comment {
+  display: block;
+  padding: 10px 0;
+  font-size: 14px;
+  border-bottom: 1px solid grey;
+}
